@@ -12,13 +12,20 @@ const store = createStore({
 				name: payload.name,
 				position: payload.position
 			}
-			state.employees.push(newEmployee)
-		}
+			state.employees.unshift(newEmployee)
+		},
+		DELETE_EMPLOYEE: (state, payload) => {
+			const index = state.employees.findIndex(todo => todo.id === payload);
+    state.employees.splice(index, 1);
+		  }
 	},
 	actions: {
-		ADD_EMPLOYEE (context, payload) {
+		addEmployee (context, payload) {
 			context.commit('ADD_EMPLOYEE', payload)
-		  }
+		  },
+		deleteEmployee: (context, payload) => {
+			context.commit('DELETE_EMPLOYEE', payload);
+		}
 	},
 	getters: {
 		getEmployees: state => state.employees

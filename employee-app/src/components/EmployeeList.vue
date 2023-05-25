@@ -13,7 +13,7 @@
 			  <p class="job-title"> {{ employees.position }}</p>
 			</div>
 		  </div>
-		  <button class="delete">X</button>
+		  <button class="delete" @click="deleteEmployee">X</button>
 		</div>
 	  </li>
 	</ul>
@@ -27,6 +27,11 @@ export default {
   computed: {
 	employees () {
       return this.$store.getters.getEmployees;
+    }
+  },
+  methods: {
+	deleteEmployee: function (id) {
+      this.$store.dispatch('deleteEmployee', id);
     }
   }
 }

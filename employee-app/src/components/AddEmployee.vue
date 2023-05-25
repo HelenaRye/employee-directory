@@ -18,7 +18,7 @@ export default {
 
 		const addEmployee = () => {
 			if (position.value && name.value) {
-				store.dispatch('ADD_EMPLOYEE', position.value, name.value)
+				store.dispatch('addEmployee', position.value, name.value)
 				position.value = ''
 				name.value = ''
 			}
