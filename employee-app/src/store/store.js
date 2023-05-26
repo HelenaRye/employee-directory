@@ -3,7 +3,17 @@ import { createStore } from 'vuex'
 const store = createStore({
 	namespaced: true,
 	state: {
-		employees: []
+		employees: [{
+			name: 'John Doe',
+			position: 'Software Engineer',
+			id: 1
+		},
+		{
+			name: 'Alexander Hansen',
+			position: 'Product Owner',
+			id: 2
+		}
+	]
 	},
 	mutations: {
 		ADD_EMPLOYEE (state, payload) {
