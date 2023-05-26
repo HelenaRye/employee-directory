@@ -9,6 +9,17 @@
 export default {
   name: 'SearchEmployee'
 
+  // add a ref for searchText and set to an empty string
+
+  // add searchText in the state in the vue store
+
+  // Create a search method and add it as event listender on submit button
+
+  // Greate a mutation that filters through the array and checks if the keywork searchText matches the items in the array and return the filtered array
+  
+  // Creat a getter that gets the filtered employee array
+
+  // the filtering method looks something like this getFilteredEmployees: return state.employees.filter(employee => { return employee.name.toLowerCase().includes(state.searchText.toLowerCase())
 }
 </script>
 
