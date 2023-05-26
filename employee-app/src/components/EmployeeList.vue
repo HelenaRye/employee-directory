@@ -57,7 +57,7 @@ p {
 }
 
 .delete {
-	border-radius: 5px;
+	border-radius: 6px;
 	border: none;
 	background: #0978F4;
 	width: 2rem;
