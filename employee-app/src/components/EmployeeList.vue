@@ -9,11 +9,11 @@
 		  <div class="wrapper">
 			<img class="employee-image" src="https://xsgames.co/randomusers/avatar.php?g=male" alt="">
 			<div class="employee-info">
-			  <h3 class="name"> {{ employees.name }}</h3>
-			  <p class="job-title"> {{ employees.position }}</p>
+			  <h3 class="name"> {{ employee.name }}</h3>
+			  <p class="job-title"> {{ employee.position }}</p>
 			</div>
 		  </div>
-		  <button class="delete" @click="deleteEmployee">X</button>
+		  <button class="delete" @click="deleteEmployee(employee.id)">X</button>
 		</div>
 	  </li>
 	</ul>
@@ -30,7 +30,7 @@ export default {
     }
   },
   methods: {
-	deleteEmployee: function (id) {
+	deleteEmployee (id) {
       this.$store.dispatch('deleteEmployee', id);
     }
   }
@@ -48,14 +48,14 @@ ul {
 
 img {
   border-radius: 50%;
-  width: 7rem;
+  width: 6rem;
 }
 
 .card {
   display: flex;
   justify-content: space-between;
   box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
-  border-radius: 30px;
+  border-radius: 20px;
   padding: 1.5rem 2rem;
   margin: 1rem;
 }

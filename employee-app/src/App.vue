@@ -3,8 +3,7 @@
 	<header>
     <h1 class="title">Employee Directory</h1>
     <SearchEmployee/>
-  </header>
-	<header>hej</header>
+	</header>
 	<AddEmployee/>
 	<EmployeeList/>
 	</section>
@@ -26,7 +25,7 @@ export default {
 
 <style>
 body {
-   background-color: #D4D4DD60;
+   background-color:#0978F410;
 }
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
@@ -39,7 +38,7 @@ body {
 }
 
 .app-wrapper {
-  width: 80rem;
+  width: 60rem;
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
