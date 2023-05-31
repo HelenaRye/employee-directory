@@ -4,39 +4,30 @@
 			<input v-model="name" type="text" placeholder="Name">
 			<input v-model="position" type="text" placeholder="Position">
 		</div>
-		<button class="add" @click="addEmployee">Add Employee</button>
+		<button class="add" @click="addEmployee(name, position)">Add Employee</button>
 	</section>
 </template>
 
 <script>
-import { ref } from 'vue'
-import { useStore } from 'vuex'
 
 export default {
 	name: 'AddEmployee',
-	setup () {
-		const name = ref('')
-		const position = ref('')
-		const newId = ref(0)
-
-		const store = useStore()
-
-		const addEmployee = function (e) {
-			if (position.value && name.value) {
-				store.dispatch('addEmployee', position, name, newId)
-				newId.value++
-				position.value = ''
-				name.value = ''
-			}
-		}
-
+	data () {
 		return {
-			name,
-			position,
-			newId,
-			addEmployee
+			name: '',
+			position: '',
+			newId: 0
 		}
+	},
+	methods: {
+		addEmployee () {
+			if (this.position && this.name) {
+        this.$store.dispatch('addEmployee', this);
+        this.position = '';
+        this.name = '';
+      }
 	}
+}
 }
 </script>
 
