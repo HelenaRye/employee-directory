@@ -23,6 +23,7 @@ export default {
 		addEmployee () {
 			if (this.position && this.name) {
         this.$store.dispatch('addEmployee', this);
+		this.newId = '';
         this.position = '';
         this.name = '';
       }
