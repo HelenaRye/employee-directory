@@ -38,7 +38,8 @@ body {
 }
 
 .app-wrapper {
-  width: 60rem;
+  width: 100%;
+  margin: 0 30rem;
   background-color: white;
   border-radius: 20px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -50,4 +51,15 @@ header {
   align-items: center;
   padding: 2rem;
 }
+
+@media screen and (max-width: 942px){
+	.app-wrapper {
+		margin: 0 0.5rem;
+	}
+
+	header {
+		padding: 1.5rem;
+	}
+}
+
 </style>

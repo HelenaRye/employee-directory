@@ -88,4 +88,14 @@ p {
 	display: flex;
 	flex-direction: column;
 }
+
+@media screen and (max-width: 942px){
+	img {
+		width: 4rem;
+	}
+
+	.employee-info {
+	margin-left: 1rem;
+}
+}
 </style>
